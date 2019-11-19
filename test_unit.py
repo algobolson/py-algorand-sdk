@@ -243,7 +243,7 @@ class TestTransaction(unittest.TestCase):
         last_round = 323575
         gh = "SGO1GKSzyE7IEPItTxCByw9x8FmnrCDexi9/cOUJOiI="
         index = 1
-        txn = transaction.AssetConfigTxn(pk, fee, first_round, last_round, gh,
+        txn = transaction.AssetDestroyTxn(pk, fee, first_round, last_round, gh,
                                          index=index)
         signed_txn = txn.sign(sk)
         golden = ("gqNzaWfEQBSP7HtzD/Lvn4aVvaNpeR4T93dQgo4LvywEwcZgDEoc/WVl3" +

@@ -511,6 +511,12 @@ class AssetConfigTxn(Transaction):
                 self.type == other.type)
 
 
+def AssetDestroyTxn(sender, fee, first, last, gh, index,
+                 note=None, gen=None, flat_fee=False):
+    return AssetConfigTxn(sender, fee, first, last, gh, index,
+                          note=note, gen=gen, flat_fee=flat_fee)
+
+
 class AssetFreezeTxn(Transaction):
     """
     Represents a transaction for freezing or unfreezing an account's asset
